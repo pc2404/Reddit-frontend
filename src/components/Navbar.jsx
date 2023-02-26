@@ -31,7 +31,6 @@ import { useNavigate } from "react-router-dom";
 import { setLogout } from "../state";
 import logo from "../assets/5a5a6b3b14d8c4188e0b0887.png";
 import circleLogo from "../assets/reddit-icon-25853.png";
-import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

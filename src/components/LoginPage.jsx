@@ -101,7 +101,6 @@ const LoginPage = () => {
   };
 
   const handleFormSubmit = async (values, onSubmitProps) => {
-    // console.log("value", values);
     if (isLogin) await login(values, onSubmitProps);
     if (isRegister) await register(values, onSubmitProps);
   };
@@ -118,7 +117,6 @@ const LoginPage = () => {
         handleBlur,
         handleChange,
         handleSubmit,
-        setFieldValue,
         resetForm,
       }) => (
         <form onSubmit={handleSubmit}>
