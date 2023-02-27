@@ -27,19 +27,8 @@ const store = configureStore({
       },
     }),
 });
-// const store = configureStore({
-//   reducer: {
-//     auth: authReducer,
-//   },
-// });
 
 const root = createRoot(document.getElementById("root"));
-
-// root.render(
-//   <Provider store={store}>
-//     <App />
-//   </Provider>
-// );
 
 root.render(
   <React.StrictMode>

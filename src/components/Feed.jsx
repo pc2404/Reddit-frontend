@@ -15,10 +15,13 @@ const Feed = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
   const getFeedPosts = async () => {
-    const response = await fetch("http://localhost:5003/posts", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      "https://reddit-backend-hg03.onrender.com/posts",
+      {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     const feedPosts = await response.json();
     dispatch(setPosts({ posts: feedPosts }));
   };

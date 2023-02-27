@@ -35,11 +35,14 @@ const AddPosts = () => {
     console.log("obj", obj);
 
     async function getAllPosts() {
-      const response = await fetch("http://localhost:5003/posts/create", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(obj),
-      });
+      const response = await fetch(
+        "https://reddit-backend-hg03.onrender.com/posts/create",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(obj),
+        }
+      );
       const allPosts = await response.json();
       console.log(allPosts);
 

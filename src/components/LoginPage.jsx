@@ -61,7 +61,7 @@ const LoginPage = () => {
 
   const register = async (values, onSubmitProps) => {
     const savedUserResponse = await fetch(
-      "http://localhost:5003/auth/register",
+      "https://reddit-backend-hg03.onrender.com/auth/register",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -78,11 +78,14 @@ const LoginPage = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("http://localhost:5003/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
+    const loggedInResponse = await fetch(
+      "https://reddit-backend-hg03.onrender.com/auth/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      }
+    );
     const loggedIn = await loggedInResponse.json();
     console.log(loggedIn);
     onSubmitProps.resetForm();
